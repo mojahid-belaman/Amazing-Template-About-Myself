@@ -669,13 +669,13 @@ ul {
     align-items: center;
     padding-top: 50px;
 }
-.team .container .box:hover .data img{
-    filter: grayscale(100%);
-}
 .team .container .box .data img{
     width: calc(100% - 60px);
     transition: 0.3s;
     border-radius: 10px;
+}
+.team .container .box:hover .data img{
+    filter: grayscale(100%);
 }
 .team .container .box .media {
     width: 60px;
@@ -684,6 +684,11 @@ ul {
     align-items: center;
     gap: 15px;
     margin: 0 auto;
+    color: #777;
+}
+.team .container .box .media i:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 /* End Team */
