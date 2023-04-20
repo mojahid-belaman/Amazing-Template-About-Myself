@@ -955,6 +955,135 @@ ul {
     height: 64px;
 }
 /* End Step Work */
+/* Start Events */
+.events {
+    padding-top: var(--main-section-padding);
+    padding-bottom: var(--main-section-padding);
+    position: relative;
+}
+.events .container {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.events .container img {
+    max-width: 450px;
+}
+@media (max-width: 991px) {
+    .events .container img {
+        display: none;
+    }
+}
+.events .container .info {
+    flex: 1;
+}
+.events .container .info .time {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    margin: 20px 0;
+    gap: 15px;
+}
+.events .container .info .time .unit {
+    border: 1px solid #D4D4D4;
+    border-radius: 5px;
+    width: 80px;
+    text-align: center;
+    transition: 0.3s;
+}
+.events .container .info .time .unit:hover,
+.events .container .info .time .unit:hover span:last-child {
+    border-color: var(--main-color);
+}
+.events .container .info .time .unit span {
+    display: block;
+    transition: 0.3s;
+}
+.events .container .info .time .unit span:first-child {
+    padding: 10px;
+    font-size: 35px;
+    color: var(--main-color);
+}
+.events .container .info .time .unit span:last-child {
+    font-size: 14px;
+    padding: 8px 10px;
+    border-top: 1px solid #D4D4D4;
+}
+.events .container h3 {
+    text-align: center;
+    margin: 40px 0 0;
+    font-size: 24px;
+}
+.events .container p {
+    color: #777;
+    text-align: center;
+    line-height: 1.7;
+}
+.events .container .subscribe {
+    width: 100%;
+    margin-top: 50px;
+}
+.events .container .subscribe form {
+    background-color: #f6f5f5;
+    width: 600px;
+    margin: 0 auto;
+    display: flex;
+    gap: 15px;
+    padding: 40px;
+    border-radius: 50px;
+}
+@media (max-width: 767px) {
+    .events .container .subscribe form {
+        max-width: 100%;
+        flex-direction: column;
+        padding: 25px;
+        border-radius: 0;
+    }
+}
+.events .container .subscribe form input[type="email"] {
+    flex: 1;
+    border-radius: 50px;
+    padding: 15px;
+    border: none;
+    caret-color: var(--main-color);
+}
+@media (max-width: 767px) {
+    .events .container .subscribe form input[type="email"] {
+        border-radius: 0;
+    }
+
+}
+.events .container .subscribe form input[type="email"]:focus {
+    outline: none;
+}
+.events .container .subscribe form input[type="email"]::placeholder {
+    transition: opacity 0.3s;
+}
+.events .container .subscribe form input[type="email"]:focus::placeholder {
+    opacity: 0;
+}
+.events .container .subscribe form input[type="submit"] {
+    border-radius: 50px;
+    padding: 15px;
+    border: none;
+    background-color: var(--main-color);
+    color: #FFF;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.events .container .subscribe form input[type="submit"]:hover {
+    background-color: var(--main-color-alt);
+}
+@media (max-width: 767px) {
+    .events .container .subscribe form input[type="submit"] {
+        border-radius: 0;
+        font-size: 20px;
+    }
+
+}
+/* End Events */
 /* Start Animation */
 @keyframes up-down {
     0%, 100%{
