@@ -1221,6 +1221,63 @@ ul {
     color: #FFF;
 }
 /* End Pricing */
+/* Start Video */
+.videos {
+    padding-top: var(--main-section-padding);
+    padding-bottom: var(--main-section-padding);
+    position: relative;
+}
+.videos .holder {
+    display: flex;
+    justify-content: center;
+    background-color: var(--main-background);
+    border: 1px solid #DDD;
+}
+@media (max-width: 991px) {
+    .videos .holder {
+        flex-direction: column;
+    }
+}
+.videos .holder .list {
+    background-color: #FFF;
+    min-width: 300px;
+}
+.videos .holder .list .name {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #f4f4f4;
+    font-weight: bold;
+}
+.videos .holder .list ul li {
+    padding: 20px;
+    border-top: 1px solid var(--main-background);
+    cursor: pointer;
+    transition: 0.3s;
+}
+.videos .holder .list ul li:hover {
+    color: var(--main-color);
+}
+.videos .holder .list ul li span {
+    display: block;
+    color: #777;
+    margin-top: 8px;
+}
+.videos .holder .preview {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 10px;
+    gap: 10px;
+}
+.videos .holder .preview img {
+    max-width: 100%;
+}
+.videos .holder .preview .info {
+    background-color: #FFF;
+    padding: 20px;
+}
+/* End Video */
 /* Start Animation */
 @keyframes up-down {
     0%, 100%{
