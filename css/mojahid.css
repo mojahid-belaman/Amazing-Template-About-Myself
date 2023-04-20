@@ -1084,6 +1084,143 @@ ul {
 
 }
 /* End Events */
+/* Start Pricing */
+.pricing {
+    padding-top: var(--main-section-padding);
+    padding-bottom: var(--main-section-padding);
+    background-color: var(--main-background);
+    position: relative;
+}
+.pricing .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+}
+.pricing .container .box {
+    flex: 1;
+    background-color: #FFF;
+    text-align: center;
+    box-shadow: 0px 12px 20px 0px rgb(0 0 0 / 13%);
+    position: relative;
+    z-index: 1;
+}
+@media (max-width: 991px) {
+    .pricing .container .box {
+        flex-basis: 33%;
+    }
+}
+@media (max-width: 767px) {
+    .pricing .container .box {
+        flex-basis: 50%;
+    }
+}
+.pricing .container .box::before,
+.pricing .container .box::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 50%;
+    background-color: #f6f6f6;
+    z-index: -1;
+    transition: 0.3s;
+}
+.pricing .container .box::before {
+    left: 0;
+    top: 0;
+}
+.pricing .container .box::after {
+    right: 0;
+    bottom: 0;
+}
+.pricing .container .box:hover::before,
+.pricing .container .box:hover::after {
+    width: 100%;
+}
+@media (min-width: 1200px) {
+    .pricing .container .box.popular {
+        top: -20px;
+    }
+}
+.pricing .container .box .label {
+    position: absolute;
+    writing-mode: vertical-lr;
+    background-color: var(--main-color);
+    color: #FFF;
+    font-weight: bold;
+    font-size: 18px;
+    right: 16px;
+    width: 40px;
+    padding: 10px 10px 35px 10px;
+}
+.pricing .container .box .label::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    border-style: solid;
+    border-width: 20px;
+    border-color: transparent transparent #FFF transparent;
+    transition: 0.4s;
+}
+.pricing .container .box:hover .label::before {
+    border-color: transparent transparent #f6f6f6 transparent;
+}
+.pricing .container .box h3 {
+    font-size: 26px;
+    margin: 40px;
+    letter-spacing: -1px;
+}
+.pricing .container .box img {
+    width: 80px;
+    margin-bottom: 25px;
+}
+.pricing .container .box .amount span {
+    display: block;
+}
+.pricing .container .box .amount span:first-child {
+    font-size: 46px;
+    font-weight: bold;
+    color: var(--main-color);
+    margin-bottom: 6px;
+}
+.pricing .container .box .amount span:last-child {
+    color: #777;
+    margin-bottom: 20px;
+}
+.pricing .container .box ul {
+    text-align: left;
+}
+.pricing .container .box ul li {
+    padding: 30px;
+    border-top: 1px solid #eee;
+}
+.pricing .container .box ul li::before {
+    font-family: "Font Awesome 5 Free";
+    content: '\f00c';
+    font-weight: 900;
+    color: var(--main-color);
+    margin-right: 10px;
+    font-weight: bold;
+}
+.pricing .container .box a {
+    display: block;
+    width: fit-content;
+    margin: 40px auto;
+    border: 2px solid var(--main-color);
+    border-radius: 6px;
+    color: var(--main-color);
+    padding: 15px 20px;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.3s;
+}
+.pricing .container .box a:hover {
+    background-color: var(--main-color-alt);
+    border-color: var(--main-color);
+    color: #FFF;
+}
+/* End Pricing */
 /* Start Animation */
 @keyframes up-down {
     0%, 100%{
